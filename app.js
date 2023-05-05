@@ -4,6 +4,7 @@ const app = Vue.createApp({
             title:"Do you know JS",
             author:"K N D",
             age:20,
+            showBook:true,
         }
     },
     // methods: {

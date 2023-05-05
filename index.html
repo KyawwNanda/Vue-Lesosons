@@ -10,12 +10,15 @@
 <body>
     <h1>Vue JS 3 learning</h1>
     <div id="app">
-        <h1> Book Title -{{title}}</h1>
-        <h1> Author -{{author}}</h1>
-        <h1> Author Age  -{{age}}</h1>
-        <button v-on:click="age++">Increase Age</button> <br>
-        <button v-on:click="author='Kyaw Kyaw'">Change Name</button>
-
+        <div v-if="showBook">
+            <h1> Book Title -{{title}}</h1>
+            <h1> Author -{{author}}</h1>
+            <h1> Author Age  -{{age}}</h1>
+        </div>
+        <button @click="showBook=!showBook">
+            <span v-if="showBook">Hide</span>
+            <span v-if="!showBook">Show</span>
+        </button>
     </div>
     <script src="app.js"></script>
 </body>
