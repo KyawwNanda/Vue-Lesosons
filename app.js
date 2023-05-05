@@ -12,6 +12,17 @@ const app = Vue.createApp({
     //         this.age++;
     //     }
     // },
+    methods: {
+        mouseOver(event,data){
+            console.log('Mouse Over is working now!',event.type,data)
+        },
+        mouseLeave(event){
+            console.log('Mouse Leave is working now!',event.type)
+        },
+        doubleClick(event){
+            console.log(' Double Click is working now!',event.type)
+        }
+    },
 });
 
 app.mount('#app');

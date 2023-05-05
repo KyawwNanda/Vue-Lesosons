@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Vue  JS</title>
+    <style>
+        .Div{
+            background-color: red; width: 200px; height:200px;text-align: center;align-items: center; display: inline-block;
+            margin: 30px;
+            padding: 50px;
+            color: azure;
+
+        }
+    </style>
 </head>
 <body>
     <h1>Vue JS 3 learning</h1>
@@ -19,6 +28,12 @@
             <span v-if="showBook">Hide</span>
             <span v-if="!showBook">Show</span>
         </button>
+        <hr>
+        <!-- //$event  This keyword is Key-->
+        <div class="Div" @mouseover="mouseOver($event,'data')">Mouse Hover</div> 
+        <div class="Div" @mouseleave="mouseLeave">MouseOut</div>
+        <div class="Div" @dblclick="doubleClick">Double Click</div>
+  
     </div>
     <script src="app.js"></script>
 </body>
