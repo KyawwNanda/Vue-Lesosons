@@ -20,19 +20,25 @@
     <h1>Vue JS 3 learning</h1>
     <div id="app">
         <div v-if="showBook">
-            <h1> Book Title -{{title}}</h1>
-            <h1> Author -{{author}}</h1>
-            <h1> Author Age  -{{age}}</h1>
+            <div v-for="book in books">
+                <h1> Book Title -{{book.title}}</h1>
+                <h1> Author -{{book.author}}</h1>
+                <h1> Author Age  -{{book.age}}</h1>
+                <hr>
+            </div>
         </div>
         <button @click="showBook=!showBook">
             <span v-if="showBook">Hide</span>
             <span v-if="!showBook">Show</span>
         </button>
         <hr>
-        <!-- //$event  This keyword is Key-->
+
+        <a v-bind:href="link">Google</a> <hr>
+        <a :href="link">Google Two</a>
+        <!-- //$event  This keyword is Key
         <div class="Div" @mouseover="mouseOver($event,'data')">Mouse Hover</div> 
         <div class="Div" @mouseleave="mouseLeave">MouseOut</div>
-        <div class="Div" @dblclick="doubleClick">Double Click</div>
+        <div class="Div" @dblclick="doubleClick">Double Click</div> -->
   
     </div>
     <script src="app.js"></script>

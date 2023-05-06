@@ -1,10 +1,25 @@
 const app = Vue.createApp({
     data(){
         return{
-            title:"Do you know JS",
-            author:"K N D",
-            age:20,
+            books:[
+                {
+                    title:"Do you know JS",
+                    author:"K N D",
+                    age:20,
+                },
+                {
+                    title:"Do you know Php",
+                    author:"K S KK",
+                    age:20,
+                },
+                {
+                    title:"Do you know Vue",
+                    author:"K K N",
+                    age:20,
+                }
+            ],
             showBook:true,
+            link:'http://www.google.com',
         }
     },
     // methods: {
