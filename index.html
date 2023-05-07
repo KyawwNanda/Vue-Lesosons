@@ -14,13 +14,17 @@
             color: azure;
 
         }
+        .color{
+            background-color: aqua;
+        }
     </style>
 </head>
 <body>
     <h1>Vue JS 3 learning</h1>
     <div id="app">
         <div v-if="showBook">
-            <div v-for="book in books">
+            <div v-for="book in books" :class="{color:!book.isFav}">
+                <img :src="book.img" alt="" width="200">
                 <h1> Book Title -{{book.title}}</h1>
                 <h1> Author -{{book.author}}</h1>
                 <h1> Author Age  -{{book.age}}</h1>
