@@ -23,7 +23,8 @@
     <h1>Vue JS 3 learning</h1>
     <div id="app">
         <div v-if="showBook">
-            <div v-for="book in books" :class="{color:!book.isFav}">
+            <!-- <div v-for="book in books" :class="{color:!book.isFav}" @click="book.isFav=!book.isFav"> -->
+            <div v-for="book in filteredBooks" :class="{color:book.isFav}" @click="clickHandler(book)">
                 <img :src="book.img" alt="" width="200">
                 <h1> Book Title -{{book.title}}</h1>
                 <h1> Author -{{book.author}}</h1>

@@ -46,8 +46,18 @@ const app = Vue.createApp({
         },
         doubleClick(event){
             console.log(' Double Click is working now!',event.type)
+        },
+        clickHandler(book){
+            book.isFav = !book.isFav;
         }
     },
+    computed:{
+        filteredBooks(){
+            return this.books.filter(book=>{
+                return book.isFav;
+            })
+        }
+    }
 });
 
 app.mount('#app');
